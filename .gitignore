@@ -4,3 +4,4 @@
 mallServer
 go.sum
 vendor/
+bin/

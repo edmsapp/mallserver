@@ -18,9 +18,9 @@ API 性能测试脚本，会自动执行 wrk 命令，采集数据、分析数�
 > Note: 需要确保系统安装了 wrk 和 gnuplot 工具
 EOF
 
-t1="apiserver" # 对比图中红色线条名称
+t1="bin/mallserver" # 对比图中红色线条名称
 t2="http" # 对比图中粉色线条名称
-jobname="apiserver" # 本次测试名称
+jobname="mallserver" # 本次测试名称
 
 ## wrk 参数配置
 d="300s" 
@@ -30,7 +30,7 @@ threads=144
 if [ "$1" != "" ];then
 	url="$1"
 else
-	url="http://127.0.0.1:8080/sd/health"
+	url="http://127.0.0.1:8800/sd/health"
 fi
 
 cmd="wrk --latency -t$threads -d$d -T30s $url"
@@ -181,12 +181,12 @@ set ytics nomirror
 set yrange[0:100]
 set title "Success Rate\nRunning: 300s\nThreads: $threads"
 set output "${t1}_$t2.success_rate.diff.png"  #指定数据文件名称
-plot "/tmp/plot_diff.dat" using 4:xticlabels(1) w lp pt 7 ps 1 lc rgbcolor "#EE0000" t "$t1 Success Rate","/tmp/plot_diff.dat" using 7:xticlabels(1) w lp pt 7 ps 1 lc rgbcolor "#EE82EE" t "$t2 Success Rate"
+plot "./tmp/plot_diff.dat" using 4:xticlabels(1) w lp pt 7 ps 1 lc rgbcolor "#EE0000" t "$t1 Success Rate","/tmp/plot_diff.dat" using 7:xticlabels(1) w lp pt 7 ps 1 lc rgbcolor "#EE82EE" t "$t2 Success Rate"
 EOF
 }
 
 if [ "$1" == "diff" ];then
-	join $2 $3 > /tmp/plot_diff.dat
+	join $2 $3 > ./tmp/plot_diff.dat
 	plotDiff `basename $2` `basename $3`
 	exit 0
 fi

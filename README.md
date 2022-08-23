@@ -11,3 +11,9 @@ $ go mod vender
 $ go mod download
 $ go run ./main.go
 ```
+
+## swagger
+
+```sh
+$ swag init
+```
