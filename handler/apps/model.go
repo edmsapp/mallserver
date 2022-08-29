@@ -28,3 +28,12 @@ type SwaggerListResponse struct {
 	TotalCount uint64           `json:"totalCount"`
 	UserList   []model.UserInfo `json:"userList"`
 }
+
+type AreaListsResponse struct {
+	Id int `json:"id"`
+}
+
+type AreaListsRequest struct {
+	TotalCount uint64             `json:"totalCount"`
+	AreaLists  []*model.AreaModel `json:"areaLists"`
+}

@@ -61,6 +61,7 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	app := g.Group("/app/v1")
 	{
 		app.GET("/productlists", apps.ProductLists)
+		app.GET("/arealists", apps.AreaLists)
 	}
 
 	return g

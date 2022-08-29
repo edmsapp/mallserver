@@ -18,12 +18,23 @@ log:
   log_rotate_size: 1
   log_backup_count: 7
 db:
-  name: feimall
-  addr: 39.98.154.93:3306
-  username: malluser
-  password: fbx34dfs$3%T#
+  name: mall 
+  addr: localhost:3306
+  username: root
+  password: rustPassWord
 docker_db:
-  name: feimall
-  addr: 39.98.154.93:3306
-  username: malluser
-  password: fbx34dfs$3%T#
+  name: mall
+  addr: localhost:3306
+  username: root
+  password: rustPassWord
+
+# db:
+#   name: feimall
+#   addr: 39.98.154.93:3306
+#   username: malluser
+#   password: fbx34dfs$3%T#
+# docker_db:
+#   name: feimall
+#   addr: 39.98.154.93:3306
+#   username: malluser
+#   password: fbx34dfs$3%T#

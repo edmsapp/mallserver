@@ -11,6 +11,8 @@ services:
       MYSQL_ROOT_PASSWORD: rustPassWord 
     ports:
       - 3306:3306
+    volumes:
+      - ./mysqlData:/var/lib/mysql
 
   redis:
     container_name: redis

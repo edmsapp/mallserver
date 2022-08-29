@@ -71,3 +71,11 @@ func ListUser(username string, offset, limit int) ([]*model.UserInfo, uint64, er
 
 	return infos, count, nil
 }
+
+func AreaLists(id int) ([]*model.AreaModel, uint64, error) {
+	area, count, err := model.AreaLists(id)
+	if err != nil {
+		return nil, count, err
+	}
+	return area, count, nil
+}
