@@ -18,12 +18,12 @@ log:
   log_rotate_size: 1
   log_backup_count: 7
 db:
-  name: mall 
+  name: goshop 
   addr: localhost:3306
   username: root
   password: rustPassWord
 docker_db:
-  name: mall
+  name: goshop
   addr: localhost:3306
   username: root
   password: rustPassWord

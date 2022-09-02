@@ -7,6 +7,7 @@ import (
 	"mallServer/handler/apps"
 	"mallServer/handler/sd"
 	"mallServer/handler/user"
+	"mallServer/handler/web"
 	"mallServer/router/middleware"
 
 	"github.com/gin-contrib/pprof"
@@ -39,7 +40,7 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 
 	// The user handlers, requiring authentication
 	u := g.Group("/v1/user")
-	// u.Use(middleware.AuthMiddleware())
+	u.Use(middleware.AuthMiddleware())
 	{
 		u.POST("", user.Create)
 		u.DELETE("/:id", user.Delete)
@@ -62,6 +63,16 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	{
 		app.GET("/productlists", apps.ProductLists)
 		app.GET("/arealists", apps.AreaLists)
+	}
+
+	// web api interface
+	webapi := g.Group("/api/web")
+	{
+		subweb := webapi.Group("/index")
+		{
+			subweb.GET("/banner", web.GetIndexBanner)
+			subweb.GET("/category", web.GetIndexLists)
+		}
 	}
 
 	return g

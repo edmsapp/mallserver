@@ -33,7 +33,7 @@ else
 	url="http://127.0.0.1:8800/sd/health"
 fi
 
-cmd="wrk --latency -t$threads -d$d -T30s $url"
+cmd="./tools/bin/wrk --latency -t$threads -d$d -T30s $url"
 apiperformance="${jobname}_performance.png"
 apisuccessrate="${jobname}_success_rate.png"
 datfile="${jobname}_wrk.dat"
