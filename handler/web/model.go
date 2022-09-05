@@ -15,6 +15,6 @@ type GetIndexBannerResponse struct {
 }
 
 type GetIndexGategoryResponse struct {
-	TotalCount uint64                    `json:"totalCount"`
-	Lists      []*model.Product_category `json:"lists"`
+	TotalCount uint64      `json:"totalCount"`
+	Lists      []*model.Ad `json:"lists"`
 }
