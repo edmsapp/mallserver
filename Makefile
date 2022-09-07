@@ -1,6 +1,6 @@
 GO111MODULE=on
 all:
-	go build -o bin/mallserver ./main.go
+	go build -o bin/newsServ ./main.go
 
 doc:
 	swag init

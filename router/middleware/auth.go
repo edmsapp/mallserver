@@ -1,9 +1,9 @@
 package middleware
 
 import (
-	"mallServer/handler"
-	"mallServer/pkg/errno"
-	"mallServer/pkg/token"
+	"newsServ/handler"
+	"newsServ/pkg/errno"
+	"newsServ/pkg/token"
 
 	"github.com/gin-gonic/gin"
 )

@@ -1,7 +1,7 @@
 package user
 
 import (
-	"mallServer/model"
+	"newsServ/model"
 )
 
 type CreateRequest struct {

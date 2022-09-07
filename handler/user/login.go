@@ -1,11 +1,11 @@
 package user
 
 import (
-	. "mallServer/handler"
-	"mallServer/model"
-	"mallServer/pkg/auth"
-	"mallServer/pkg/errno"
-	"mallServer/pkg/token"
+	. "newsServ/handler"
+	"newsServ/model"
+	"newsServ/pkg/auth"
+	"newsServ/pkg/errno"
+	"newsServ/pkg/token"
 
 	"github.com/gin-gonic/gin"
 )

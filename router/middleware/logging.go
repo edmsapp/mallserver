@@ -7,8 +7,8 @@ import (
 	"regexp"
 	"time"
 
-	"mallServer/handler"
-	"mallServer/pkg/errno"
+	"newsServ/handler"
+	"newsServ/pkg/errno"
 
 	"github.com/gin-gonic/gin"
 	"github.com/willf/pad"

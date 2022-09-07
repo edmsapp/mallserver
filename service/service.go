@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"sync"
 
-	"mallServer/model"
-	"mallServer/util"
+	"newsServ/model"
+	"newsServ/util"
 )
 
 func ListUser(username string, offset, limit int) ([]*model.UserInfo, uint64, error) {

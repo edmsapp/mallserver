@@ -3,9 +3,9 @@ package user
 import (
 	"strconv"
 
-	. "mallServer/handler"
-	"mallServer/model"
-	"mallServer/pkg/errno"
+	. "newsServ/handler"
+	"newsServ/model"
+	"newsServ/pkg/errno"
 
 	"github.com/gin-gonic/gin"
 )

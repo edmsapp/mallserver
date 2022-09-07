@@ -3,10 +3,10 @@ package user
 import (
 	"strconv"
 
-	. "mallServer/handler"
-	"mallServer/model"
-	"mallServer/pkg/errno"
-	"mallServer/util"
+	. "newsServ/handler"
+	"newsServ/model"
+	"newsServ/pkg/errno"
+	"newsServ/util"
 
 	"github.com/gin-gonic/gin"
 	"github.com/zxmrlc/log"

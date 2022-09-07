@@ -1,4 +1,4 @@
-module mallServer
+module newsServ
 
 go 1.19
 

@@ -1,9 +1,9 @@
 package apps
 
 import (
-	. "mallServer/handler"
-	"mallServer/pkg/errno"
-	"mallServer/service"
+	. "newsServ/handler"
+	"newsServ/pkg/errno"
+	"newsServ/service"
 	"strconv"
 
 	"github.com/gin-gonic/gin"

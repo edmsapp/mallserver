@@ -3,8 +3,8 @@ package model
 import (
 	"fmt"
 
-	"mallServer/pkg/auth"
-	"mallServer/pkg/constvar"
+	"newsServ/pkg/auth"
+	"newsServ/pkg/constvar"
 
 	validator "gopkg.in/go-playground/validator.v9"
 )

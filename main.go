@@ -9,11 +9,11 @@ import (
 	"os"
 	"time"
 
-	"mallServer/config"
-	"mallServer/model"
-	v "mallServer/pkg/version"
-	"mallServer/router"
-	"mallServer/router/middleware"
+	"newsServ/config"
+	"newsServ/model"
+	v "newsServ/pkg/version"
+	"newsServ/router"
+	"newsServ/router/middleware"
 
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/pflag"
@@ -26,16 +26,6 @@ var (
 	version = pflag.BoolP("version", "v", false, "show version info.")
 )
 
-// @title Apiserver Example API
-// @version 1.0
-// @description apiserver demo
-
-// @contact.name lkong
-// @contact.url http://www.swagger.io/support
-// @contact.email 466701708@qq.com
-
-// @host localhost:8080
-// @BasePath /v1
 func main() {
 	pflag.Parse()
 	if *version {

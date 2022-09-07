@@ -3,7 +3,7 @@ package handler
 import (
 	"net/http"
 
-	"mallServer/pkg/errno"
+	"newsServ/pkg/errno"
 
 	"github.com/gin-gonic/gin"
 )

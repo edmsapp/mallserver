@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SERVER="bin/mallserver"
+SERVER="bin/newsServ"
 BASE_DIR=$PWD
 INTERVAL=2
 
